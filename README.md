@@ -10,10 +10,14 @@ evaluations are conducted on the UESTC, NTU 60, NTU 120, and Northwestern-UCLA d
 ##  View-Semantic Fisher Contrastive Learning (VS-FCL) Results
 The VS-FCL results include two sub-parts: View-term FCL (V-FCL) and Semantic-term FCL (S-FCL).
 
+The V-FCL is presented to assist view disentanglement for generating view-common
+and view-specific action representations.Bring closer the common viewpoint features of the same category, and separate the unique viewpoint features of the same category.
 
+Base on the V-FCL, The Semantic-term FCL (S-FCL) propels semantic disentanglement to learn semantic-oriented action representations.
 
 ### Visualization
-Here, we 
+Here, we  provide the t-SNE visualization of feature distributions learned by the VS-FCL algorithm in the UESTC dataset. Different colors and markers
+represent different actions and viewpoints.(Except for the Sample 5, we use color to represent viewpoints to visualize the discriminative effect of different viewpoints.)
 
 <!-- <figure class="third">
     <img src="./bigjpg/f-c-3_1.jpg">
@@ -44,7 +48,7 @@ Here, we
 
 - Sample 5: View-specific representation obtained by V-FCL(1 class)
 
-<img src="./bigjpg/f-s-17_1.png" width=220><img src="./bigjpg/f-s-17_2.png" width=220><img src="./bigjpg/f-s-17_3.png" width=220>
+<img src="./bigjpg/fs_17_1.jpg" width=220><img src="./bigjpg/fs_17_2.jpg" width=220><img src="./bigjpg/fs_17_3.jpg" width=220>
 
 - Sample 6：semantic-oriented representationobtained by S-FCL
 
