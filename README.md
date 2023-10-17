@@ -6,7 +6,23 @@ The view change is a serious challenge for extracting invariant representation f
 recognition. Besides, we introduce the Spatio-Temporal Cross-View Representation (ST-CVR) learning to capture view-interactive action features to fuse action information from different views, so as to guarantee obtaining view-invariant representation and improving recognition accuracy. Extensive and fair
 evaluations are conducted on the UESTC, NTU 60, NTU 120, and Northwestern-UCLA datasets. The experiment results show that our proposed approach achieves outstanding performance on all datasets for view-invariant action recognition.
 ***   
-
+## Training
+### stage1:
+You can train your own model by running the training file:
+The aim of the first-stage training is to eliminate differences between various viewpoints. Therefore, we restrict the input data to be of the same category.
+Noting that because the ST-CVR learning, if you change your CUDA_VISIBLE_DEVICES=0, then the batch_size should be changed to 16.
+```
+CUDA_VISIBLE_DEVICES=0,1,2,3  python train_stage1.pypy --model ctrgcn --batch_size 64 --num_workers 0 --model_path results/ --case 0 --dataset UESTC --tb_path tb_logger/ --amp --resume plt_model/ckpt_epoch_30.pth
+```
+Also you can resume your training process as following:
+```
+CUDA_VISIBLE_DEVICES=0,1,2,3  python train_stage1.pypy --model ctrgcn --batch_size 64 --num_workers 0 --model_path results/ --case 0 --dataset UESTC --tb_path tb_logger/ --amp --resume plt_model/ckpt_epoch_30.pth
+```
+### stage2:
+After the training of stage1, The V-FCL assists the view-common representation learning, which heavily reduces the influence of view change.Thus S-FCL is applied on the view-common action featurefc for semantic disentanglement. You can train your own model by running the training file:
+```
+CUDA_VISIBLE_DEVICES=0,1,2,3  python train_stage2.pypy --model ctrgcn --batch_size 64 --num_workers 0 --model_path results/ --case 0 --dataset UESTC --tb_path tb_logger/ --amp --pretrain_path [your saved checkpoint of stage1]
+```
 ##  View-Semantic Fisher Contrastive Learning (VS-FCL) Results
 The VS-FCL results include two sub-parts: View-term FCL (V-FCL) and Semantic-term FCL (S-FCL).
 
