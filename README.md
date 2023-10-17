@@ -26,8 +26,8 @@ Here, we
 
 
  - Sample 1：View-common representation obtained by V-FCL(3 classes)
- 
-<img src="./bigjpg/f-c-3_1.jpg" width="200"><img src="./bigjpg/f-c-3_2.jpg" width="200"><img src="./bigjpg/f-c-3_3.jpg" width="200">
+
+<img src="./bigjpg/f-c-3_1.jpg" width="300"><img src="./bigjpg/f-c-3_2.jpg" width="300"><img src="./bigjpg/f-c-3_3.jpg" width="300">
 
 
 <!-- |View-common Representation|<img src="./bigjpg/f-c-3_1.jpg" width="200">|<img src="./bigjpg/f-c-3_2.jpg" width="200">|<mg src="./bigjpg/f-c-3_3.jpg" width="200">
