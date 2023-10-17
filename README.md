@@ -15,14 +15,16 @@ The VS-FCL results include two sub-parts: View-term FCL (V-FCL) and Semantic-ter
 ### Visualization
 Here, we 
 
-<figure class="third">
+<!-- <figure class="third">
     <img src="./bigjpg/f-c-3_1.jpg">
     <figcaption>这是图片1的标题</figcaption>
     <img src="./bigjpg/f-c-3_2.jpg">
     <figcaption>这是图片2的标题</figcaption>
     <img src="./bigjpg/f-c-3_3.jpg">
     <figcaption>这是图片3的标题</figcaption>
-</figure>
+</figure> -->
 
 
+ - Sample 1：View-common representation obtained by V-FCL(3 classes)
 
+|View-common representation|<img src="./bigjpg/f-c-3_1.jpg" width="150">|<img src="./bigjpg/f-c-3_2.jpg" width="150">|<mg src="./bigjpg/f-c-3_3.jpg" width="150">
