@@ -25,9 +25,10 @@ Here, we
 </figure> -->
 - Sample 1：Distribution of original action representation
 
-<img src="./bigjpg/L-S-fv-40_1_begin.jpg" width=220><img src="./bigjpg/L-S-fv-40_2_begin.jpg" width=220><img src="./bigjpg/L-S-fv-40_3_begin.jpg" width=220>
+<img src="./bigjpg/L-S-fv-40_1_begin.png" width=220><img src="./bigjpg/L-S-fv-40_2_begin.png" width=220><img src="./bigjpg/L-S-fv-40_3_begin.png" width=220>
 
  - Sample 2：View-common representation obtained by V-FCL(3 classes)
+
 <img src="./bigjpg/f-c-3_1.jpg" width=220><img src="./bigjpg/f-c-3_2.jpg" width=220><img src="./bigjpg/f-c-3_3.jpg" width=220>
 
 <!-- |View-common Representation|<img src="./bigjpg/f-c-3_1.jpg" width="200">|<img src="./bigjpg/f-c-3_2.jpg" width="200">|<mg src="./bigjpg/f-c-3_3.jpg" width="200">
@@ -43,7 +44,8 @@ Here, we
 
 - Sample 5: View-specific representation obtained by V-FCL(1 class)
 
-<img src="./bigjpg/f-s-17_1.jpg" width=220><img src="./bigjpg/f-s-17_2.jpg" width=220><img src="./bigjpg/f-s-17_3.jpg" width=220>
+<img src="./bigjpg/f-s-17_1.png" width=220><img src="./bigjpg/f-s-17_2.png" width=220><img src="./bigjpg/f-s-17_3.png" width=220>
 
 - Sample 6：semantic-oriented representationobtained by S-FCL
+
 <img src="./bigjpg/VS-FCL-10_1.jpg" width=220><img src="./bigjpg/VS-FCL-10_2.jpg" width=220><img src="./bigjpg/VS-FCL-10_3.jpg" width=220>
