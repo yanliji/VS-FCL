@@ -69,3 +69,7 @@ represent different actions and viewpoints.(Except for the Sample 5, we use colo
 - Sample 6：semantic-oriented representationobtained by S-FCL
 
 <img src="./bigjpg/VS-FCL-10_1.jpg" width=220><img src="./bigjpg/VS-FCL-10_2.jpg" width=220><img src="./bigjpg/VS-FCL-10_3.jpg" width=220>
+
+## Conclusion
+In this paper, we have proposed a View-Semantic Fisher Contrastive Learning (VS-FCL) algorithm, which designs the V-FCL and S-FCL to drive view and semantic disentanglement and obtained view-invariant semantic-oriented action representation for correct recognition, efficiently dealing with the view change problem. Four large-scale datasets were adopted to evaluate the proposed VS-FCL algorithm. Comparison with SOTAs sufficiently certified the superiority of our VS-FCL for view-invariant action recognition. Ablation studies on VS-FCL and ST-CVR components further
+certified their solid contributions for view-invariant action representation and recognition.
