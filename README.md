@@ -32,7 +32,7 @@ and view-specific action representations.Bring closer the common viewpoint featu
 Base on the V-FCL, The Semantic-term FCL (S-FCL) propels semantic disentanglement to learn semantic-oriented action representations.
 
 ### Visualization
-Here, we  provide the t-SNE visualization of feature distributions learned by the VS-FCL algorithm in the UESTC dataset. Different colors and markers represent different actions and viewpoints.In Sample 1, the view-common representation(fc features) obtained by V-FCL should aggregate together. In Sample 2, the view-specific representation(fs features) obtained by V-FCL should separate from each other within an action category. In Sample 3, the semantic-oriented representationobtained by S-FCL should separate from each other across different action categories.
+Here, we  provide the t-SNE visualization of feature distributions learned by the VS-FCL algorithm in the UESTC dataset. Different colors and markers represent different actions and viewpoints.In Sample 1 and Sample 2,  fv, fc, and fs features obtained after the stage 1 training from left to right, and the view-specific representation (fs features)  should separate from each other within an action category while view-common representation(fc features) aggregate together.In Sample 3, the semantic-oriented representation obtained  should separate from each other across different action categories, and the origin semantic representation, the fv trained by Cross-Entrop loss and semantic reprenstation trained by VS-FCL are visualized.
 <!-- <figure class="third">
     <img src="./bigjpg/f-c-3_1.jpg">
     <figcaption>这是图片1的标题</figcaption>
@@ -51,29 +51,29 @@ Here, we  provide the t-SNE visualization of feature distributions learned by th
 
 <!-- |View-common Representation|<img src="./bigjpg/f-c-3_1.jpg" width="200">|<img src="./bigjpg/f-c-3_2.jpg" width="200">|<mg src="./bigjpg/f-c-3_3.jpg" width="200">
 |:-:|:-:|:-:| -->
-- Sample 1：View-common representation obtained by V-FCL(3 classes)
-
-<img src="./bigjpg/f-c-3_1.jpg" width=220><img src="./bigjpg/f-c-3_2.jpg" width=220><img src="./bigjpg/f-c-3_3.jpg" width=220>
+- Sample 1：View-oriented representation obtained by V-FCL(3 classes)
 
 
-- Sample 2：View-common representation obtained by V-FCL(10 classes)
+<img src="./bigjpg/f-v-3_1.jpg" width=220><img src="./bigjpg/f-c-3_1.jpg" width=220><img src="./bigjpg/f-s-3_1.jpg" width=220>
 
-<img src="./bigjpg/V-FCL-10_1.jpg" width=220><img src="./bigjpg/V-FCL-10_2.jpg" width=220><img src="./bigjpg/V-FCL-10_3.jpg" width=220>
 
-- Sample 3：View-specific representation obtained by V-FCL(3 classes)
+- Sample 2：View-oriented representation obtained by V-FCL(10 classes)
 
-<img src="./bigjpg/f-s-3_1.jpg" width=220><img src="./bigjpg/f-s-3_2.jpg" width=220><img src="./bigjpg/f-s-3_3.jpg" width=220>
 
-- Sample 4: View-specific representation obtained by V-FCL(10 classes)
 
-<img src="./bigjpg/F-S-10_1.png" width=220><img src="./bigjpg/F-S-10_2.png" width=220><img src="./bigjpg/F-S-10_3.png" width=220>
+<img src="./F-V-10_1.jpg" width=220><img src="./bigjpg/V-FCL-10_1.jpg" width=220><img src="./bigjpg/F-S-10_1.png" width=220>
+
+
+- Sample 3：Semantic-oriented representationobtained by S-FCL
+
+<img src="./bigjpg/L-S-fv-40_1_begin.png" width=220><img src="./bigjpg/L-S-fv-40_1_final.png" width=220><img src="./bigjpg/VS-FCL-10_3.jpg" width=220>
+
+
 <!-- - Sample 5: View-specific representation obtained by V-FCL(1 class)
 
 <!-- <img src="./bigjpg/fs_17_1.jpg" width=220><img src="./bigjpg/fs_17_2.jpg" width=220><img src="./bigjpg/fs_17_3.jpg" width=220> --> 
 
-- Sample 5：Semantic-oriented representationobtained by S-FCL
 
-<img src="./bigjpg/VS-FCL-10_1.jpg" width=220><img src="./bigjpg/VS-FCL-10_2.jpg" width=220><img src="./bigjpg/VS-FCL-10_3.jpg" width=220>
 
 ## Conclusion
 In this paper, we have proposed a View-Semantic Fisher Contrastive Learning (VS-FCL) algorithm, which designs the V-FCL and S-FCL to drive view and semantic disentanglement and obtained view-invariant semantic-oriented action representation for correct recognition, efficiently dealing with the view change problem. Four large-scale datasets were adopted to evaluate the proposed VS-FCL algorithm. Comparison with SOTAs sufficiently certified the superiority of our VS-FCL for view-invariant action recognition. Ablation studies on VS-FCL and ST-CVR components further
