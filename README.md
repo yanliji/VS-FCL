@@ -51,20 +51,27 @@ Here, we  provide the t-SNE visualization of feature distributions learned by th
 
 <!-- |View-common Representation|<img src="./bigjpg/f-c-3_1.jpg" width="200">|<img src="./bigjpg/f-c-3_2.jpg" width="200">|<mg src="./bigjpg/f-c-3_3.jpg" width="200">
 |:-:|:-:|:-:| -->
+- Sample 1：View-common representation obtained by V-FCL(3 classes)
 
-- Sample 1：View-common representation obtained by V-FCL(10 classes)
+<img src="./bigjpg/f-c-3_1.jpg" width=220><img src="./bigjpg/f-c-3_2.jpg" width=220><img src="./bigjpg/f-c-3_3.jpg" width=220>
+
+
+- Sample 2：View-common representation obtained by V-FCL(10 classes)
 
 <img src="./bigjpg/V-FCL-10_1.jpg" width=220><img src="./bigjpg/V-FCL-10_2.jpg" width=220><img src="./bigjpg/V-FCL-10_3.jpg" width=220>
 
-- Sample 2：View-specific representation obtained by V-FCL(3 classes)
+- Sample 3：View-specific representation obtained by V-FCL(3 classes)
 
 <img src="./bigjpg/f-s-3_1.jpg" width=220><img src="./bigjpg/f-s-3_2.jpg" width=220><img src="./bigjpg/f-s-3_3.jpg" width=220>
 
+-Sample 4: View-specific representation obtained by V-FCL(10 classes)
+
+<img src="./bigjpg/F-S-10_1.jpg" width=220><img src="./bigjpg/F-S-10_2.jpg" width=220><img src="./bigjpg/F-S-10_3.jpg" width=220>
 <!-- - Sample 5: View-specific representation obtained by V-FCL(1 class)
 
 <img src="./bigjpg/fs_17_1.jpg" width=220><img src="./bigjpg/fs_17_2.jpg" width=220><img src="./bigjpg/fs_17_3.jpg" width=220> -->
 
-- Sample 3：Semantic-oriented representationobtained by S-FCL
+- Sample 5：Semantic-oriented representationobtained by S-FCL
 
 <img src="./bigjpg/VS-FCL-10_1.jpg" width=220><img src="./bigjpg/VS-FCL-10_2.jpg" width=220><img src="./bigjpg/VS-FCL-10_3.jpg" width=220>
 
