@@ -32,9 +32,7 @@ and view-specific action representations.Bring closer the common viewpoint featu
 Base on the V-FCL, The Semantic-term FCL (S-FCL) propels semantic disentanglement to learn semantic-oriented action representations.
 
 ### Visualization
-Here, we  provide the t-SNE visualization of feature distributions learned by the VS-FCL algorithm in the UESTC dataset. Different colors and markers
-represent different actions and viewpoints.(Except for the Sample 5, we use color to represent viewpoints to visualize the discriminative effect of different viewpoints.)
-
+Here, we  provide the t-SNE visualization of feature distributions learned by the VS-FCL algorithm in the UESTC dataset. Different colors and markers represent different actions and viewpoints.In Sample 1, the view-common representation(fc features) obtained by V-FCL should aggregate together. In Sample 2, the view-specific representation(fs features) obtained by V-FCL should separate from each other within an action category. In Sample 3, the semantic-oriented representationobtained by S-FCL should separate from each other across different action categories.
 <!-- <figure class="third">
     <img src="./bigjpg/f-c-3_1.jpg">
     <figcaption>这是图片1的标题</figcaption>
@@ -66,7 +64,7 @@ represent different actions and viewpoints.(Except for the Sample 5, we use colo
 
 <img src="./bigjpg/fs_17_1.jpg" width=220><img src="./bigjpg/fs_17_2.jpg" width=220><img src="./bigjpg/fs_17_3.jpg" width=220> -->
 
-- Sample 3：semantic-oriented representationobtained by S-FCL
+- Sample 3：Semantic-oriented representationobtained by S-FCL
 
 <img src="./bigjpg/VS-FCL-10_1.jpg" width=220><img src="./bigjpg/VS-FCL-10_2.jpg" width=220><img src="./bigjpg/VS-FCL-10_3.jpg" width=220>
 
