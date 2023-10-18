@@ -43,33 +43,45 @@ represent different actions and viewpoints.(Except for the Sample 5, we use colo
     <img src="./bigjpg/f-c-3_3.jpg">
     <figcaption>这是图片3的标题</figcaption>
 </figure> -->
-- Sample 1：Distribution of original action representation
+<!-- - Sample 1：Distribution of original action representation
 
 <img src="./bigjpg/L-S-fv-40_1_begin.png" width=220><img src="./bigjpg/L-S-fv-40_2_begin.png" width=220><img src="./bigjpg/L-S-fv-40_3_begin.png" width=220>
 
  - Sample 2：View-common representation obtained by V-FCL(3 classes)
 
-<img src="./bigjpg/f-c-3_1.jpg" width=220><img src="./bigjpg/f-c-3_2.jpg" width=220><img src="./bigjpg/f-c-3_3.jpg" width=220>
+<img src="./bigjpg/f-c-3_1.jpg" width=220><img src="./bigjpg/f-c-3_2.jpg" width=220><img src="./bigjpg/f-c-3_3.jpg" width=220> -->
 
 <!-- |View-common Representation|<img src="./bigjpg/f-c-3_1.jpg" width="200">|<img src="./bigjpg/f-c-3_2.jpg" width="200">|<mg src="./bigjpg/f-c-3_3.jpg" width="200">
 |:-:|:-:|:-:| -->
 
-- Sample 3：View-common representation obtained by V-FCL(10 classes)
+- Sample 1：View-common representation obtained by V-FCL(10 classes)
 
 <img src="./bigjpg/V-FCL-10_1.jpg" width=220><img src="./bigjpg/V-FCL-10_2.jpg" width=220><img src="./bigjpg/V-FCL-10_3.jpg" width=220>
 
-- Sample 4：View-specific representation obtained by V-FCL(3 classes)
+- Sample 2：View-specific representation obtained by V-FCL(3 classes)
 
 <img src="./bigjpg/f-s-3_1.jpg" width=220><img src="./bigjpg/f-s-3_2.jpg" width=220><img src="./bigjpg/f-s-3_3.jpg" width=220>
 
-- Sample 5: View-specific representation obtained by V-FCL(1 class)
+<!-- - Sample 5: View-specific representation obtained by V-FCL(1 class)
 
-<img src="./bigjpg/fs_17_1.jpg" width=220><img src="./bigjpg/fs_17_2.jpg" width=220><img src="./bigjpg/fs_17_3.jpg" width=220>
+<img src="./bigjpg/fs_17_1.jpg" width=220><img src="./bigjpg/fs_17_2.jpg" width=220><img src="./bigjpg/fs_17_3.jpg" width=220> -->
 
-- Sample 6：semantic-oriented representationobtained by S-FCL
+- Sample 3：semantic-oriented representationobtained by S-FCL
 
 <img src="./bigjpg/VS-FCL-10_1.jpg" width=220><img src="./bigjpg/VS-FCL-10_2.jpg" width=220><img src="./bigjpg/VS-FCL-10_3.jpg" width=220>
 
 ## Conclusion
 In this paper, we have proposed a View-Semantic Fisher Contrastive Learning (VS-FCL) algorithm, which designs the V-FCL and S-FCL to drive view and semantic disentanglement and obtained view-invariant semantic-oriented action representation for correct recognition, efficiently dealing with the view change problem. Four large-scale datasets were adopted to evaluate the proposed VS-FCL algorithm. Comparison with SOTAs sufficiently certified the superiority of our VS-FCL for view-invariant action recognition. Ablation studies on VS-FCL and ST-CVR components further
 certified their solid contributions for view-invariant action representation and recognition.
+***
+
+## Citation
+```
+@inproceedings{gao2022global,
+  title={Global-local cross-view fisher discrimination for view-invariant action recognition},
+  author={Gao, Lingling and Ji, Yanli and Yang, Yang and Shen, HengTao},
+  booktitle={Proceedings of the 30th ACM International Conference on Multimedia},
+  pages={5255--5264},
+  year={2022}
+}
+```
