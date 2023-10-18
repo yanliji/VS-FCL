@@ -12,16 +12,16 @@ You can train your own model by running the training file:
 The aim of the first-stage training is to eliminate differences between various viewpoints. Therefore, we restrict the input data to be of the same category.
 Noting that because the ST-CVR learning, if you change your CUDA_VISIBLE_DEVICES=0, then the batch_size should be changed to 16.
 ```
-CUDA_VISIBLE_DEVICES=0,1,2,3  python train_stage1.pypy --model ctrgcn --batch_size 64 --num_workers 0 --model_path results/ --case 0 --dataset UESTC --tb_path tb_logger/ --amp --resume plt_model/ckpt_epoch_30.pth
+CUDA_VISIBLE_DEVICES=0,1,2,3  python train_stage1.py --model ctrgcn --batch_size 64 --num_workers 0 --model_path results/ --case 0 --dataset UESTC --tb_path tb_logger/ --amp --resume plt_model/ckpt_epoch_30.pth
 ```
 Also you can resume your training process as following:
 ```
-CUDA_VISIBLE_DEVICES=0,1,2,3  python train_stage1.pypy --model ctrgcn --batch_size 64 --num_workers 0 --model_path results/ --case 0 --dataset UESTC --tb_path tb_logger/ --amp --resume plt_model/ckpt_epoch_30.pth
+CUDA_VISIBLE_DEVICES=0,1,2,3  python train_stage1.py --model ctrgcn --batch_size 64 --num_workers 0 --model_path results/ --case 0 --dataset UESTC --tb_path tb_logger/ --amp --resume plt_model/ckpt_epoch_30.pth
 ```
 ### stage2:
 After the training of stage1, The V-FCL assists the view-common representation learning, which heavily reduces the influence of view change.Thus S-FCL is applied on the view-common action featurefc for semantic disentanglement. You can train your own model by running the training file:
 ```
-CUDA_VISIBLE_DEVICES=0,1,2,3  python train_stage2.pypy --model ctrgcn --batch_size 64 --num_workers 0 --model_path results/ --case 0 --dataset UESTC --tb_path tb_logger/ --amp --pretrain_path [your saved checkpoint of stage1]
+CUDA_VISIBLE_DEVICES=0,1,2,3  python train_stage2.py --model ctrgcn --batch_size 64 --num_workers 0 --model_path results/ --case 0 --dataset UESTC --tb_path tb_logger/ --amp --pretrain_path [your saved checkpoint of stage1]
 ```
 ##  View-Semantic Fisher Contrastive Learning (VS-FCL) Results
 The VS-FCL results include two sub-parts: View-term FCL (V-FCL) and Semantic-term FCL (S-FCL).
@@ -32,7 +32,7 @@ and view-specific action representations.Bring closer the common viewpoint featu
 Base on the V-FCL, The Semantic-term FCL (S-FCL) propels semantic disentanglement to learn semantic-oriented action representations.
 
 ### Visualization
-Here, we  provide the t-SNE visualization of feature distributions learned by the VS-FCL algorithm in the UESTC dataset. Different colors and markers represent different actions and viewpoints.In Sample 1 and Sample 2,  fv, fc, and fs features obtained after the stage 1 training from left to right, and the view-specific representation (fs features)  should separate from each other within an action category while view-common representation(fc features) aggregate together.In Sample 3, the semantic-oriented representation obtained  should separate from each other across different action categories, and the origin semantic representation, the fv trained by Cross-Entrop loss and semantic reprenstation trained by VS-FCL are visualized.
+Here, we  provide the t-SNE visualization of feature distributions learned by the VS-FCL algorithm in the UESTC dataset. Different colors and markers represent different actions and viewpoints.Specifically, we provide the original viewpoint features, the view-common features obtained after V-FCL learning, and the semantic features obtained after VS-FCL learning. Our goal is to eliminate the impact of multi-view differences through the learning of the first-stage V-FCL, thereby promoting the separation of semantic features of various categories in the second-stage VS-FCL.
 <!-- <figure class="third">
     <img src="./bigjpg/f-c-3_1.jpg">
     <figcaption>这是图片1的标题</figcaption>
@@ -51,24 +51,30 @@ Here, we  provide the t-SNE visualization of feature distributions learned by th
 
 <!-- |View-common Representation|<img src="./bigjpg/f-c-3_1.jpg" width="200">|<img src="./bigjpg/f-c-3_2.jpg" width="200">|<mg src="./bigjpg/f-c-3_3.jpg" width="200">
 |:-:|:-:|:-:| -->
-- Sample 1：View-oriented representation obtained by V-FCL(3 classes)
+- Sample 1：View-origin representation(3 classes)
+
+<img src="./bigjpg/f-v-3_1.jpg" width=220><img src="./bigjpg/f-v-3_2.jpg" width=220><img src="./bigjpg/f-v-3_3.jpg" width=220>
 
 
-<img src="./bigjpg/f-v-3_1.jpg" width=220><img src="./bigjpg/f-c-3_1.jpg" width=220><img src="./bigjpg/f-s-3_1.jpg" width=220>
+- Sample 2：View-common representation obtained by V-FCL(3 classes)
 
+<img src="./bigjpg/V-FCL-3_1.jpg" width=220><img src="./bigjpg/V-FCL-3_2.jpg" width=220><img src="./bigjpg/V-FCL-3_3.jpg" width=220>
 
-- Sample 2：View-oriented representation obtained by V-FCL(10 classes)
+- Sample 3：Semantic-oriented representationobtained by VS-FCL(3 classes)
 
+<img src="./bigjpg/VS-FCL-3_1.jpg" width=220><img src="./bigjpg/VS-FCL-3_2.jpg" width=220><img src="./bigjpg/VS-FCL-3_3.jpg" width=220>
 
+- Sample 4：View-origin representation(10 classes)
 
-<img src="./bigjpg/F-V-10_1.jpg" width=220><img src="./bigjpg/V-FCL-10_1.jpg" width=220><img src="./bigjpg/F-S-10_1.png" width=220>
+<img src="./bigjpg/F-V-10_1.jpg" width=220><img src="./bigjpg/F-V-10_2.jpg" width=220><img src="./bigjpg/F-V-10_3.jpg" width=220>
 
+- Sample 5：View-common representation obtained by V-FCL(10 Classes)
 
-- Sample 3：Semantic-oriented representationobtained by S-FCL
+<img src="./bigjpg/V-FCL-10_1.jpg" width=220><img src="./bigjpg/V-FCL-10_2.jpg" width=220><img src="./bigjpg/V-FCL-10_3.jpg" width=220>
 
-<img src="./bigjpg/L-S-fv-40_1_begin.png" width=220><img src="./bigjpg/L-S-fv-40_1_final.png" width=220><img src="./bigjpg/VS-FCL-10_1.jpg" width=220>
+- Sample 6：Semantic-oriented representationobtained by VS-FCL(10 classes)
 
-
+<img src="./bigjpg/VS-FCL-10_1.jpg" width=220><img src="./bigjpg/VS-FCL-10_2.jpg" width=220><img src="./bigjpg/VS-FCL-10_3.jpg" width=220>
 <!-- - Sample 5: View-specific representation obtained by V-FCL(1 class)
 
 <!-- <img src="./bigjpg/fs_17_1.jpg" width=220><img src="./bigjpg/fs_17_2.jpg" width=220><img src="./bigjpg/fs_17_3.jpg" width=220> --> 
