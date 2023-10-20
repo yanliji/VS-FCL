@@ -23,6 +23,7 @@ After the training of stage1, The V-FCL assists the view-common representation l
 ```
 CUDA_VISIBLE_DEVICES=0,1,2,3  python train_stage2.py --model ctrgcn --batch_size 64 --num_workers 0 --model_path results/ --case 0 --dataset UESTC --tb_path tb_logger/ --amp --pretrain_path [your saved checkpoint of stage1]
 ```
+
 ##  View-Semantic Fisher Contrastive Learning (VS-FCL) Results
 The VS-FCL results include two sub-parts: View-term FCL (V-FCL) and Semantic-term FCL (S-FCL).
 
@@ -53,28 +54,28 @@ Here, we  provide the t-SNE visualization of feature distributions learned by th
 |:-:|:-:|:-:| -->
 - Sample 1：View-origin representation(3 classes)
 
-<img src="./imgs/f-v-3_1.jpg" width=220><img src="./imgs/f-v-3_2.jpg" width=220><img src="./imgs/f-v-3_3.jpg" width=220>
+<img src="./Visualization_files/f-v-3_1.jpg" width=220><img src="./Visualization_files/f-v-3_2.jpg" width=220><img src="./Visualization_files/f-v-3_3.jpg" width=220>
 
 
 - Sample 2：View-common representation obtained by V-FCL(3 classes)
 
-<img src="./imgs/V-FCL-3_1.jpg" width=220><img src="./imgs/V-FCL-3_2.jpg" width=220><img src="./imgs/V-FCL-3_3.jpg" width=220>
+<img src="./Visualization_files/V-FCL-3_1.jpg" width=220><img src="./Visualization_files/V-FCL-3_2.jpg" width=220><img src="./Visualization_files/V-FCL-3_3.jpg" width=220>
 
 - Sample 3：Semantic-oriented representationobtained by VS-FCL(3 classes)
 
-<img src="./imgs/VS-FCL-3_1.jpg" width=220><img src="./imgs/VS-FCL-3_2.jpg" width=220><img src="./imgs/VS-FCL-3_3.jpg" width=220>
+<img src="./Visualization_files/VS-FCL-3_1.jpg" width=220><img src="./Visualization_files/VS-FCL-3_2.jpg" width=220><img src="./Visualization_files/VS-FCL-3_3.jpg" width=220>
 
 - Sample 4：View-origin representation(10 classes)
 
-<img src="./imgs/F-V-10_1.jpg" width=220><img src="./imgs/F-V-10_2.jpg" width=220><img src="./imgs/F-V-10_3.jpg" width=220>
+<img src="./Visualization_files/F-V-10_1.jpg" width=220><img src="./Visualization_files/F-V-10_2.jpg" width=220><img src="./Visualization_files/F-V-10_3.jpg" width=220>
 
 - Sample 5：View-common representation obtained by V-FCL(10 Classes)
 
-<img src="./imgs/V-FCL-10_1.jpg" width=220><img src="./imgs/V-FCL-10_2.jpg" width=220><img src="./imgs/V-FCL-10_3.jpg" width=220>
+<img src="./Visualization_files/V-FCL-10_1.jpg" width=220><img src="./Visualization_files/V-FCL-10_2.jpg" width=220><img src="./Visualization_files/V-FCL-10_3.jpg" width=220>
 
 - Sample 6：Semantic-oriented representationobtained by VS-FCL(10 classes)
 
-<img src="./imgs/VS-FCL-10_1.jpg" width=220><img src="./imgs/VS-FCL-10_2.jpg" width=220><img src="./imgs/VS-FCL-10_3.jpg" width=220>
+<img src="./Visualization_files/VS-FCL-10_1.jpg" width=220><img src="./Visualization_files/VS-FCL-10_2.jpg" width=220><img src="./Visualization_files/VS-FCL-10_3.jpg" width=220>
 <!-- - Sample 5: View-specific representation obtained by V-FCL(1 class)
 
 <!-- <img src="./bigjpg/fs_17_1.jpg" width=220><img src="./bigjpg/fs_17_2.jpg" width=220><img src="./bigjpg/fs_17_3.jpg" width=220> --> 
