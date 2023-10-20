@@ -7,6 +7,7 @@ recognition. Besides, we introduce the Spatio-Temporal Cross-View Representation
 evaluations are conducted on the UESTC, NTU 60, NTU 120, and Northwestern-UCLA datasets. The experiment results show that our proposed approach achieves outstanding performance on all datasets for view-invariant action recognition.
 ***   
 ## Training
+You can initiate a quick training in our code part as follows. For additional information, please refer to /code/README.md.
 ### stage1:
 You can train your own model by running the training file:
 The aim of the first-stage training is to eliminate differences between various viewpoints. Therefore, we restrict the input data to be of the same category.
