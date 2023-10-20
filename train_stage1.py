@@ -27,9 +27,9 @@ from torchvision import transforms, datasets
 #from dataset import RGB2Lab, RGB2YCbCr
 #from dataset import NTUDataLoaders
 import torch.nn.functional as F
-# from NCE.NCEAverage import NCEAverage
-# from NCE.NCECriterion import NCECriterion
-# from NCE.NCECriterion import NCESoftmaxLoss
+from NCE.NCEAverage import NCEAverage
+from NCE.NCECriterion import NCECriterion
+from NCE.NCECriterion import NCESoftmaxLoss
 #from dataset import ImageFolderInstance
 
 # model distributed training setting

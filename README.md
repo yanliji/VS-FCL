@@ -53,12 +53,12 @@ Here, we  provide the t-SNE visualization of feature distributions learned by th
 |:-:|:-:|:-:| -->
 - Sample 1：View-origin representation(3 classes)
 
-<img src="./bigjpg/f-v-3_1.jpg" width=220><img src="./bigjpg/f-v-3_2.jpg" width=220><img src="./bigjpg/f-v-3_3.jpg" width=220>
+<img src="./imgs/f-v-3_1.jpg" width=220><img src="./imgs/f-v-3_2.jpg" width=220><img src="./imgs/f-v-3_3.jpg" width=220>
 
 
 - Sample 2：View-common representation obtained by V-FCL(3 classes)
 
-<img src="./bigjpg/V-FCL-3_1.jpg" width=220><img src="./bigjpg/V-FCL-3_2.jpg" width=220><img src="./bigjpg/V-FCL-3_3.jpg" width=220>
+<img src="./imgs/V-FCL-3_1.jpg" width=220><img src="./imgs/V-FCL-3_2.jpg" width=220><img src="./bigjpg/V-FCL-3_3.jpg" width=220>
 
 - Sample 3：Semantic-oriented representationobtained by VS-FCL(3 classes)
 
