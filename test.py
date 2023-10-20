@@ -13,7 +13,7 @@ import torch.nn.functional as F
 from math import exp
 import tensorboard_logger as tb_logger
 from util import adjust_learning_rate, AverageMeter
-from dataset_new import NTUDataLoaders
+from dataset_new_stage2 import NTUDataLoaders
 import torch.nn as nn
 from torch import optim
 from models.alexnet import MyAlexNetCMC
